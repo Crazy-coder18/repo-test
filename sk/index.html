@@ -1,0 +1,1564 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Microsoft Semantic Kernel - My Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#microsoft-semantic-kernel" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Blog" class="md-header__button md-logo" aria-label="My Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Microsoft Semantic Kernel
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Blog" class="md-nav__button md-logo" aria-label="My Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sample/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sample Post
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Key Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Key Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multi-language-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Language Support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-service-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Service Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enterprise-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enterprise Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏗️ Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Getting Started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c-net" class="md-nav__link">
+    <span class="md-ellipsis">
+      C# (.NET)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typescriptjavascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      TypeScript/JavaScript
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      C# Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Core Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Core Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Kernel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#native-functions-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      Native Functions (C#)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semantic-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Semantic Functions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Plugins
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Memory &amp; Embeddings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Memory &amp; Embeddings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vector-memory-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vector Memory Store
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rag-retrieval-augmented-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      RAG (Retrieval-Augmented Generation)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planners" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Planners
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Planners">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sequential-planner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequential Planner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-calling-planner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Calling Planner
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-code-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Advanced Code Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💻 Advanced Code Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-ai-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom AI Agent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-modal-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Modal Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streaming-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Streaming Responses
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Performance Optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Error Handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Security Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Integration Scenarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔗 Integration Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-web-api-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Web API Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-background-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Background Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-rate-limiting" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Rate Limiting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-memory-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Memory Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#official-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Official Documentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community &amp; Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools &amp; Extensions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recent-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Recent Updates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Recent Updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-100-latest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 1.0.0 (Latest)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upcoming-features-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upcoming Features (Roadmap)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="microsoft-semantic-kernel">Microsoft Semantic Kernel</h1>
+<h2 id="overview">🧠 Overview</h2>
+<p>Microsoft Semantic Kernel (SK) is an open-source SDK that lets you easily combine AI services like OpenAI, Azure OpenAI, and Hugging Face with conventional programming languages like C#, Python, and Java. It serves as a lightweight, enterprise-ready orchestration layer that enables developers to create AI agents and integrate large language models (LLMs) into their applications.</p>
+<h2 id="table-of-contents">📋 Table of Contents</h2>
+<ul>
+<li><a href="#key-features">Key Features</a></li>
+<li><a href="#architecture">Architecture</a></li>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#core-concepts">Core Concepts</a></li>
+<li><a href="#plugins--functions">Plugins &amp; Functions</a></li>
+<li><a href="#memory--embeddings">Memory &amp; Embeddings</a></li>
+<li><a href="#planners">Planners</a></li>
+<li><a href="#code-examples">Code Examples</a></li>
+<li><a href="#best-practices">Best Practices</a></li>
+<li><a href="#integration-scenarios">Integration Scenarios</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+<h2 id="key-features">🚀 Key Features</h2>
+<h3 id="multi-language-support"><strong>Multi-Language Support</strong></h3>
+<ul>
+<li><strong>C#</strong>: First-class support with .NET integration</li>
+<li><strong>Python</strong>: Full-featured implementation</li>
+<li><strong>Java</strong>: Enterprise-ready SDK</li>
+<li><strong>TypeScript/JavaScript</strong>: Web and Node.js support</li>
+</ul>
+<h3 id="ai-service-integration"><strong>AI Service Integration</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Provider</th>
+<th>Capabilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPT-4/GPT-3.5</td>
+<td>OpenAI</td>
+<td>Text generation, completion</td>
+</tr>
+<tr>
+<td>Azure OpenAI</td>
+<td>Microsoft</td>
+<td>Enterprise-grade AI services</td>
+</tr>
+<tr>
+<td>Claude</td>
+<td>Anthropic</td>
+<td>Advanced reasoning</td>
+</tr>
+<tr>
+<td>Llama 2</td>
+<td>Meta</td>
+<td>Open-source models</td>
+</tr>
+<tr>
+<td>Hugging Face</td>
+<td>Community</td>
+<td>Diverse model ecosystem</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enterprise-features"><strong>Enterprise Features</strong></h3>
+<ul>
+<li>🔐 <strong>Security</strong>: Built-in authentication and authorization</li>
+<li>📊 <strong>Observability</strong>: Logging, metrics, and tracing</li>
+<li>🏗️ <strong>Scalability</strong>: Async/await patterns and performance optimization</li>
+<li>🔧 <strong>Extensibility</strong>: Plugin architecture for custom functionality</li>
+</ul>
+<h2 id="architecture">🏗️ Architecture</h2>
+<pre><code class="language-mermaid">graph TB
+    A[Application Layer] --&gt; B[Semantic Kernel]
+    B --&gt; C[Kernel Services]
+    B --&gt; D[Plugins]
+    B --&gt; E[Memory]
+    B --&gt; F[Planners]
+
+    C --&gt; G[AI Services]
+    C --&gt; H[Connectors]
+
+    D --&gt; I[Native Functions]
+    D --&gt; J[Semantic Functions]
+
+    E --&gt; K[Vector Store]
+    E --&gt; L[Embeddings]
+
+    F --&gt; M[Sequential Planner]
+    F --&gt; N[Action Planner]
+
+    G --&gt; O[OpenAI]
+    G --&gt; P[Azure OpenAI]
+    G --&gt; Q[Hugging Face]
+</code></pre>
+<h2 id="getting-started">🎯 Getting Started</h2>
+<h3 id="installation"><strong>Installation</strong></h3>
+<h4 id="c-net">C# (.NET)</h4>
+<pre><code class="language-bash">dotnet add package Microsoft.SemanticKernel
+dotnet add package Microsoft.SemanticKernel.Plugins.Core
+</code></pre>
+<h4 id="python">Python</h4>
+<pre><code class="language-bash">pip install semantic-kernel
+pip install semantic-kernel[azure]
+</code></pre>
+<h4 id="typescriptjavascript">TypeScript/JavaScript</h4>
+<pre><code class="language-bash">npm install @microsoft/semantic-kernel
+</code></pre>
+<h3 id="basic-setup"><strong>Basic Setup</strong></h3>
+<h4 id="c-example">C# Example</h4>
+<pre><code class="language-csharp">using Microsoft.SemanticKernel;
+using Microsoft.SemanticKernel.AI.OpenAI;
+
+// Create kernel instance
+var kernel = Kernel.CreateBuilder()
+    .AddAzureOpenAIChatCompletion(
+        deploymentName: &quot;gpt-35-turbo&quot;,
+        endpoint: &quot;https://your-resource.openai.azure.com/&quot;,
+        apiKey: &quot;your-api-key&quot;)
+    .Build();
+
+// Simple prompt execution
+var prompt = &quot;Translate 'Hello World' to French&quot;;
+var result = await kernel.InvokePromptAsync(prompt);
+Console.WriteLine(result);
+</code></pre>
+<h4 id="python-example">Python Example</h4>
+<pre><code class="language-python">import semantic_kernel as sk
+from semantic_kernel.connectors.ai.open_ai import AzureChatCompletion
+
+# Initialize kernel
+kernel = sk.Kernel()
+
+# Add AI service
+azure_chat_service = AzureChatCompletion(
+    deployment_name=&quot;gpt-35-turbo&quot;,
+    endpoint=&quot;https://your-resource.openai.azure.com/&quot;,
+    api_key=&quot;your-api-key&quot;
+)
+kernel.add_chat_service(&quot;azure_chat&quot;, azure_chat_service)
+
+# Execute prompt
+async def main():
+    prompt = &quot;Explain quantum computing in simple terms&quot;
+    result = await kernel.invoke_prompt_async(prompt)
+    print(result)
+
+import asyncio
+asyncio.run(main())
+</code></pre>
+<h2 id="core-concepts">🧩 Core Concepts</h2>
+<h3 id="1-kernel"><strong>1. Kernel</strong></h3>
+<p>The central orchestration engine that manages AI services, plugins, and memory.</p>
+<pre><code class="language-csharp">var kernel = Kernel.CreateBuilder()
+    .AddAzureOpenAIChatCompletion(deploymentName, endpoint, apiKey)
+    .AddAzureOpenAITextEmbeddingGeneration(embeddingDeployment, endpoint, apiKey)
+    .Build();
+</code></pre>
+<h3 id="2-functions"><strong>2. Functions</strong></h3>
+<p>Reusable pieces of functionality that can be combined to solve complex problems.</p>
+<h4 id="native-functions-c">Native Functions (C#)</h4>
+<pre><code class="language-csharp">public class MathPlugin
+{
+    [KernelFunction]
+    [Description(&quot;Add two numbers&quot;)]
+    public double Add(
+        [Description(&quot;First number&quot;)] double number1,
+        [Description(&quot;Second number&quot;)] double number2)
+    {
+        return number1 + number2;
+    }
+
+    [KernelFunction]
+    [Description(&quot;Calculate compound interest&quot;)]
+    public double CompoundInterest(
+        [Description(&quot;Principal amount&quot;)] double principal,
+        [Description(&quot;Annual interest rate&quot;)] double rate,
+        [Description(&quot;Number of years&quot;)] int years)
+    {
+        return principal * Math.Pow(1 + rate, years);
+    }
+}
+</code></pre>
+<h4 id="semantic-functions">Semantic Functions</h4>
+<pre><code class="language-csharp">var summarizeFunction = kernel.CreateFunctionFromPrompt(
+    promptTemplate: @&quot;
+    Summarize the following text in 2-3 sentences:
+
+    {{$input}}
+
+    Summary:&quot;,
+    functionName: &quot;Summarize&quot;,
+    description: &quot;Summarize text content&quot;
+);
+
+var result = await kernel.InvokeAsync(summarizeFunction, new() { [&quot;input&quot;] = longText });
+</code></pre>
+<h3 id="3-plugins"><strong>3. Plugins</strong></h3>
+<p>Collections of related functions that can be imported and used together.</p>
+<pre><code class="language-csharp">// Import built-in plugins
+kernel.ImportPluginFromType&lt;TimePlugin&gt;(&quot;time&quot;);
+kernel.ImportPluginFromType&lt;MathPlugin&gt;(&quot;math&quot;);
+
+// Import custom plugin
+kernel.ImportPluginFromObject(new EmailPlugin(emailService), &quot;email&quot;);
+
+// Use plugin functions
+var currentTime = await kernel.InvokeAsync(&quot;time&quot;, &quot;Now&quot;);
+var sum = await kernel.InvokeAsync(&quot;math&quot;, &quot;Add&quot;, new() { 
+    [&quot;number1&quot;] = &quot;10&quot;, 
+    [&quot;number2&quot;] = &quot;20&quot; 
+});
+</code></pre>
+<h2 id="memory-embeddings">🧠 Memory &amp; Embeddings</h2>
+<h3 id="vector-memory-store"><strong>Vector Memory Store</strong></h3>
+<pre><code class="language-csharp">using Microsoft.SemanticKernel.Memory;
+
+// Configure memory store
+var memoryBuilder = new MemoryBuilder();
+memoryBuilder.WithAzureOpenAITextEmbeddingGeneration(
+    deploymentName: &quot;text-embedding-ada-002&quot;,
+    endpoint: endpoint,
+    apiKey: apiKey);
+memoryBuilder.WithMemoryStore(new VolatileMemoryStore());
+
+var memory = memoryBuilder.Build();
+
+// Store information
+await memory.SaveInformationAsync(
+    collection: &quot;products&quot;,
+    text: &quot;The iPhone 15 Pro features a titanium design and A17 Pro chip&quot;,
+    id: &quot;iphone15pro&quot;,
+    description: &quot;iPhone 15 Pro specifications&quot;
+);
+
+// Search memory
+var searchResults = memory.SearchAsync(
+    collection: &quot;products&quot;,
+    query: &quot;What are the features of the latest iPhone?&quot;,
+    limit: 5);
+
+await foreach (var result in searchResults)
+{
+    Console.WriteLine($&quot;Relevance: {result.Relevance:F2}&quot;);
+    Console.WriteLine($&quot;Text: {result.Metadata.Text}&quot;);
+}
+</code></pre>
+<h3 id="rag-retrieval-augmented-generation"><strong>RAG (Retrieval-Augmented Generation)</strong></h3>
+<pre><code class="language-python">import semantic_kernel as sk
+from semantic_kernel.memory.volatile_memory_store import VolatileMemoryStore
+
+# Setup kernel with memory
+kernel = sk.Kernel()
+kernel.add_chat_service(&quot;azure_chat&quot;, azure_chat_service)
+kernel.add_text_embedding_generation_service(
+    &quot;azure_embedding&quot;, azure_embedding_service
+)
+
+# Register memory store
+kernel.register_memory_store(VolatileMemoryStore())
+
+# Save documents to memory
+await kernel.memory.save_information_async(
+    collection=&quot;documents&quot;,
+    text=&quot;Python is a high-level programming language known for its simplicity&quot;,
+    id=&quot;python_intro&quot;,
+    description=&quot;Introduction to Python programming&quot;
+)
+
+# RAG-enabled function
+rag_function = kernel.create_semantic_function(
+    prompt_template=&quot;&quot;&quot;
+    Use the following context to answer the question:
+
+    Context: {{recall $query}}
+
+    Question: {{$query}}
+
+    Answer:&quot;&quot;&quot;,
+    function_name=&quot;RAGAnswer&quot;
+)
+
+result = await kernel.run_async(
+    rag_function,
+    input_vars={&quot;query&quot;: &quot;What is Python?&quot;}
+)
+</code></pre>
+<h2 id="planners">🎯 Planners</h2>
+<h3 id="sequential-planner"><strong>Sequential Planner</strong></h3>
+<p>Automatically creates and executes multi-step plans.</p>
+<pre><code class="language-csharp">using Microsoft.SemanticKernel.Planning;
+
+var planner = new SequentialPlanner(kernel);
+
+var plan = await planner.CreatePlanAsync(
+    &quot;Send an email to john@example.com with the weather forecast for Seattle&quot;);
+
+Console.WriteLine(&quot;Plan steps:&quot;);
+foreach (var step in plan.Steps)
+{
+    Console.WriteLine($&quot;- {step.Description}&quot;);
+}
+
+// Execute the plan
+var result = await kernel.RunAsync(plan);
+Console.WriteLine($&quot;Result: {result}&quot;);
+</code></pre>
+<h3 id="function-calling-planner"><strong>Function Calling Planner</strong></h3>
+<pre><code class="language-python">from semantic_kernel.planning import FunctionCallingStepwisePlanner
+
+# Create planner
+planner = FunctionCallingStepwisePlanner(
+    kernel, 
+    max_iterations=10,
+    max_tokens=4000
+)
+
+# Execute complex task
+result = await planner.invoke_async(
+    &quot;Find the current temperature in New York and convert it to Celsius&quot;
+)
+
+print(f&quot;Final result: {result.final_answer}&quot;)
+print(f&quot;Steps taken: {len(result.iterations)}&quot;)
+</code></pre>
+<h2 id="advanced-code-examples">💻 Advanced Code Examples</h2>
+<h3 id="custom-ai-agent"><strong>Custom AI Agent</strong></h3>
+<pre><code class="language-csharp">public class CustomerServiceAgent
+{
+    private readonly Kernel _kernel;
+    private readonly ISemanticTextMemory _memory;
+
+    public CustomerServiceAgent(Kernel kernel, ISemanticTextMemory memory)
+    {
+        _kernel = kernel;
+        _memory = memory;
+    }
+
+    public async Task&lt;string&gt; HandleCustomerQueryAsync(string query, string customerId)
+    {
+        // Retrieve customer context from memory
+        var customerContext = await _memory.SearchAsync(
+            collection: $&quot;customer_{customerId}&quot;,
+            query: query,
+            limit: 3
+        ).ToListAsync();
+
+        var contextText = string.Join(&quot;\n&quot;, customerContext.Select(c =&gt; c.Metadata.Text));
+
+        // Create contextual response
+        var responseFunction = _kernel.CreateFunctionFromPrompt(@&quot;
+            You are a helpful customer service agent. Use the customer context below to provide a personalized response.
+
+            Customer Context:
+            {{$context}}
+
+            Customer Query: {{$query}}
+
+            Response:&quot;);
+
+        var result = await _kernel.InvokeAsync(responseFunction, new KernelArguments
+        {
+            [&quot;context&quot;] = contextText,
+            [&quot;query&quot;] = query
+        });
+
+        return result.ToString();
+    }
+}
+</code></pre>
+<h3 id="multi-modal-processing"><strong>Multi-Modal Processing</strong></h3>
+<pre><code class="language-python">async def process_image_and_text(kernel, image_path: str, text_query: str):
+    &quot;&quot;&quot;Process both image and text inputs using multi-modal AI&quot;&quot;&quot;
+
+    # Image analysis function
+    image_function = kernel.create_semantic_function(
+        prompt_template=&quot;&quot;&quot;
+        Analyze this image and describe what you see:
+
+        Image: {{$image}}
+
+        Description:&quot;&quot;&quot;,
+        function_name=&quot;AnalyzeImage&quot;
+    )
+
+    # Text processing function  
+    text_function = kernel.create_semantic_function(
+        prompt_template=&quot;&quot;&quot;
+        Based on the image description and user query, provide a comprehensive answer:
+
+        Image Description: {{$image_description}}
+        User Query: {{$query}}
+
+        Answer:&quot;&quot;&quot;,
+        function_name=&quot;ProcessQuery&quot;
+    )
+
+    # Load and encode image
+    with open(image_path, &quot;rb&quot;) as image_file:
+        image_data = base64.b64encode(image_file.read()).decode()
+
+    # Analyze image
+    image_result = await kernel.run_async(
+        image_function,
+        input_vars={&quot;image&quot;: image_data}
+    )
+
+    # Process combined input
+    final_result = await kernel.run_async(
+        text_function,
+        input_vars={
+            &quot;image_description&quot;: str(image_result),
+            &quot;query&quot;: text_query
+        }
+    )
+
+    return str(final_result)
+</code></pre>
+<h3 id="streaming-responses"><strong>Streaming Responses</strong></h3>
+<pre><code class="language-csharp">public async IAsyncEnumerable&lt;string&gt; StreamResponseAsync(string prompt)
+{
+    var function = _kernel.CreateFunctionFromPrompt(prompt);
+
+    await foreach (var chunk in _kernel.InvokeStreamingAsync&lt;string&gt;(function))
+    {
+        yield return chunk;
+    }
+}
+
+// Usage
+await foreach (var chunk in agent.StreamResponseAsync(&quot;Write a story about AI&quot;))
+{
+    Console.Write(chunk);
+    await Task.Delay(50); // Simulate typing effect
+}
+</code></pre>
+<h2 id="best-practices">📊 Best Practices</h2>
+<h3 id="1-performance-optimization"><strong>1. Performance Optimization</strong></h3>
+<pre><code class="language-csharp">// Use dependency injection
+services.AddScoped&lt;Kernel&gt;(provider =&gt; 
+{
+    return Kernel.CreateBuilder()
+        .AddAzureOpenAIChatCompletion(/* config */)
+        .Build();
+});
+
+// Implement caching
+services.AddMemoryCache();
+services.AddScoped&lt;ICachedKernelService, CachedKernelService&gt;();
+
+// Connection pooling
+services.Configure&lt;HttpClientFactoryOptions&gt;(options =&gt;
+{
+    options.HandlerLifetime = TimeSpan.FromMinutes(5);
+});
+</code></pre>
+<h3 id="2-error-handling"><strong>2. Error Handling</strong></h3>
+<pre><code class="language-csharp">public async Task&lt;string&gt; SafeInvokeAsync(string prompt)
+{
+    try
+    {
+        var result = await _kernel.InvokePromptAsync(prompt);
+        return result.ToString();
+    }
+    catch (HttpRequestException ex) when (ex.Message.Contains(&quot;429&quot;))
+    {
+        // Rate limiting - implement exponential backoff
+        await Task.Delay(TimeSpan.FromSeconds(Math.Pow(2, retryCount)));
+        return await SafeInvokeAsync(prompt);
+    }
+    catch (ArgumentException ex)
+    {
+        // Invalid input handling
+        _logger.LogWarning(&quot;Invalid prompt: {Error}&quot;, ex.Message);
+        return &quot;I'm sorry, I couldn't process that request.&quot;;
+    }
+}
+</code></pre>
+<h3 id="3-security-considerations"><strong>3. Security Considerations</strong></h3>
+<pre><code class="language-csharp">// Input validation
+public class PromptValidator
+{
+    private readonly string[] _blockedPatterns = { &quot;ignore previous&quot;, &quot;system:&quot;, &quot;assistant:&quot; };
+
+    public bool IsValidPrompt(string prompt)
+    {
+        return !_blockedPatterns.Any(pattern =&gt; 
+            prompt.ToLower().Contains(pattern.ToLower()));
+    }
+}
+
+// Content filtering
+public async Task&lt;string&gt; GetFilteredResponseAsync(string prompt)
+{
+    var result = await _kernel.InvokePromptAsync(prompt);
+    var filteredResult = await _contentFilter.FilterAsync(result.ToString());
+    return filteredResult;
+}
+</code></pre>
+<h2 id="integration-scenarios">🔗 Integration Scenarios</h2>
+<h3 id="1-web-api-integration"><strong>1. Web API Integration</strong></h3>
+<pre><code class="language-csharp">[ApiController]
+[Route(&quot;api/[controller]&quot;)]
+public class ChatController : ControllerBase
+{
+    private readonly Kernel _kernel;
+
+    public ChatController(Kernel kernel)
+    {
+        _kernel = kernel;
+    }
+
+    [HttpPost(&quot;completions&quot;)]
+    public async Task&lt;IActionResult&gt; GetCompletion([FromBody] ChatRequest request)
+    {
+        var result = await _kernel.InvokePromptAsync(request.Prompt);
+
+        return Ok(new ChatResponse
+        {
+            Message = result.ToString(),
+            Timestamp = DateTime.UtcNow
+        });
+    }
+
+    [HttpPost(&quot;completions/stream&quot;)]
+    public async Task&lt;IActionResult&gt; GetStreamingCompletion([FromBody] ChatRequest request)
+    {
+        Response.ContentType = &quot;text/event-stream&quot;;
+
+        await foreach (var chunk in _kernel.InvokeStreamingAsync&lt;string&gt;(
+            _kernel.CreateFunctionFromPrompt(request.Prompt)))
+        {
+            await Response.WriteAsync($&quot;data: {chunk}\n\n&quot;);
+            await Response.Body.FlushAsync();
+        }
+
+        return new EmptyResult();
+    }
+}
+</code></pre>
+<h3 id="2-background-service"><strong>2. Background Service</strong></h3>
+<pre><code class="language-csharp">public class DocumentProcessingService : BackgroundService
+{
+    private readonly Kernel _kernel;
+    private readonly IServiceProvider _serviceProvider;
+
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    {
+        while (!stoppingToken.IsCancellationRequested)
+        {
+            using var scope = _serviceProvider.CreateScope();
+            var documentQueue = scope.ServiceProvider.GetRequiredService&lt;IDocumentQueue&gt;();
+
+            var document = await documentQueue.DequeueAsync(stoppingToken);
+            if (document != null)
+            {
+                await ProcessDocumentAsync(document);
+            }
+
+            await Task.Delay(1000, stoppingToken);
+        }
+    }
+
+    private async Task ProcessDocumentAsync(Document document)
+    {
+        var summaryFunction = _kernel.CreateFunctionFromPrompt(@&quot;
+            Summarize the following document:
+
+            {{$content}}
+
+            Summary:&quot;);
+
+        var summary = await _kernel.InvokeAsync(summaryFunction, 
+            new KernelArguments { [&quot;content&quot;] = document.Content });
+
+        document.Summary = summary.ToString();
+        await _documentRepository.UpdateAsync(document);
+    }
+}
+</code></pre>
+<h2 id="troubleshooting">🛠️ Troubleshooting</h2>
+<h3 id="common-issues"><strong>Common Issues</strong></h3>
+<h4 id="1-rate-limiting"><strong>1. Rate Limiting</strong></h4>
+<pre><code class="language-csharp">// Implement retry with exponential backoff
+public class RateLimitHandler : DelegatingHandler
+{
+    protected override async Task&lt;HttpResponseMessage&gt; SendAsync(
+        HttpRequestMessage request, CancellationToken cancellationToken)
+    {
+        var response = await base.SendAsync(request, cancellationToken);
+
+        if (response.StatusCode == HttpStatusCode.TooManyRequests)
+        {
+            var retryAfter = response.Headers.RetryAfter?.Delta ?? TimeSpan.FromSeconds(1);
+            await Task.Delay(retryAfter, cancellationToken);
+            return await SendAsync(request, cancellationToken);
+        }
+
+        return response;
+    }
+}
+</code></pre>
+<h4 id="2-memory-management"><strong>2. Memory Management</strong></h4>
+<pre><code class="language-python"># Proper cleanup for long-running applications
+import gc
+from semantic_kernel.memory import VolatileMemoryStore
+
+class ManagedMemoryStore:
+    def __init__(self, max_items: int = 1000):
+        self.store = VolatileMemoryStore()
+        self.max_items = max_items
+        self.item_count = 0
+
+    async def save_information_async(self, collection: str, text: str, id: str):
+        if self.item_count &gt;= self.max_items:
+            await self.cleanup_old_items()
+
+        await self.store.save_information_async(collection, text, id)
+        self.item_count += 1
+
+    async def cleanup_old_items(self):
+        # Implement LRU or time-based cleanup
+        pass
+</code></pre>
+<h3 id="performance-monitoring"><strong>Performance Monitoring</strong></h3>
+<pre><code class="language-csharp">public class KernelMetrics
+{
+    private readonly IMetrics _metrics;
+    private readonly Counter&lt;int&gt; _requestCounter;
+    private readonly Histogram&lt;double&gt; _responseTime;
+
+    public KernelMetrics(IMeterFactory meterFactory)
+    {
+        var meter = meterFactory.Create(&quot;SemanticKernel&quot;);
+        _requestCounter = meter.CreateCounter&lt;int&gt;(&quot;sk_requests_total&quot;);
+        _responseTime = meter.CreateHistogram&lt;double&gt;(&quot;sk_response_duration_seconds&quot;);
+    }
+
+    public async Task&lt;T&gt; MeasureAsync&lt;T&gt;(Func&lt;Task&lt;T&gt;&gt; operation, string functionName)
+    {
+        var stopwatch = Stopwatch.StartNew();
+        try
+        {
+            var result = await operation();
+            _requestCounter.Add(1, new TagList { [&quot;function&quot;] = functionName, [&quot;status&quot;] = &quot;success&quot; });
+            return result;
+        }
+        catch
+        {
+            _requestCounter.Add(1, new TagList { [&quot;function&quot;] = functionName, [&quot;status&quot;] = &quot;error&quot; });
+            throw;
+        }
+        finally
+        {
+            _responseTime.Record(stopwatch.Elapsed.TotalSeconds, new TagList { [&quot;function&quot;] = functionName });
+        }
+    }
+}
+</code></pre>
+<h2 id="resources">📚 Resources</h2>
+<h3 id="official-documentation"><strong>Official Documentation</strong></h3>
+<ul>
+<li><a href="https://github.com/microsoft/semantic-kernel">Semantic Kernel GitHub</a></li>
+<li><a href="https://learn.microsoft.com/en-us/semantic-kernel/">Official Documentation</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.semantickernel">API Reference</a></li>
+</ul>
+<h3 id="community-learning"><strong>Community &amp; Learning</strong></h3>
+<ul>
+<li><a href="https://aka.ms/SKDiscord">Semantic Kernel Discord</a></li>
+<li><a href="https://github.com/microsoft/semantic-kernel/tree/main/samples">Sample Applications</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLdo4fOcmZ0oUQBkMrOUwCBt5GskZF3DNU">YouTube Tutorials</a></li>
+</ul>
+<h3 id="tools-extensions"><strong>Tools &amp; Extensions</strong></h3>
+<ul>
+<li><strong>Visual Studio Code Extension</strong>: Semantic Kernel Tools</li>
+<li><strong>Azure DevOps Extension</strong>: SK Pipeline Tasks</li>
+<li><strong>NuGet Packages</strong>: Microsoft.SemanticKernel.*</li>
+<li><strong>pip packages</strong>: semantic-kernel, semantic-kernel[azure]</li>
+</ul>
+<hr />
+<h2 id="recent-updates">🔄 Recent Updates</h2>
+<h3 id="version-100-latest"><strong>Version 1.0.0 (Latest)</strong></h3>
+<ul>
+<li>✨ <strong>Stable API</strong>: Production-ready with semantic versioning</li>
+<li>🚀 <strong>Performance</strong>: 50% faster function execution</li>
+<li>🔧 <strong>New Planners</strong>: Function Calling and Handlebars planners</li>
+<li>📱 <strong>Mobile Support</strong>: Xamarin and MAUI compatibility</li>
+<li>🌐 <strong>Multi-language</strong>: Java and TypeScript GA releases</li>
+</ul>
+<h3 id="upcoming-features-roadmap"><strong>Upcoming Features (Roadmap)</strong></h3>
+<ul>
+<li>🤖 <strong>Agent Framework</strong>: Multi-agent orchestration</li>
+<li>🔄 <strong>Workflow Engine</strong>: Visual workflow designer</li>
+<li>📊 <strong>Analytics Dashboard</strong>: Built-in observability</li>
+<li>🌍 <strong>Edge Deployment</strong>: IoT and edge computing support</li>
+</ul>
+<hr />
+<p><em>Last updated: July 3, 2025</em></p>
+<p><strong>© 2025 Microsoft Corporation. All rights reserved.</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
