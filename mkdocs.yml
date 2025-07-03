@@ -4,5 +4,6 @@ nav:
 - Sample Post: sample.md
 - Blogs:
   - Nodejs: docs/Nodejs.md
+  - AZURE BLOB STORAGE: docs/AZURE_BLOB_STORAGE.md
 theme:
   name: material
