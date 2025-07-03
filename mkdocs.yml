@@ -2,5 +2,7 @@ site_name: My Blog
 nav:
 - Home: index.md
 - Sample Post: sample.md
+- Blogs:
+  - Nodejs: docs/Nodejs.md
 theme:
   name: material
