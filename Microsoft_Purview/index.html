@@ -1,0 +1,754 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Microsoft Purview: Simplifying Data Governance in a Complex World - My Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#microsoft-purview-simplifying-data-governance-in-a-complex-world" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Blog" class="md-header__button md-logo" aria-label="My Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Microsoft Purview: Simplifying Data Governance in a Complex World
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Blog" class="md-nav__button md-logo" aria-label="My Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sample/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sample Post
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blogs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blogs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/Nodejs.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nodejs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/AZURE_BLOB_STORAGE.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AZURE BLOB STORAGE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/ASP.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ASP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-microsoft-purview" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Microsoft Purview?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features-of-microsoft-purview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features of Microsoft Purview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Features of Microsoft Purview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-data-discovery-and-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Data Discovery and Classification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Data Discovery and Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-classifying-sensitive-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Classifying Sensitive Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-unified-data-lineage" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Unified Data Lineage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Unified Data Lineage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#real-life-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-Life Scenario:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-end-to-end-data-governance-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. End-to-End Data Governance and Compliance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. End-to-End Data Governance and Compliance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-snippet-setting-up-compliance-scans-for-azure-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Snippet: Setting Up Compliance Scans for Azure Storage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-microsoft-365-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Microsoft 365 Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Microsoft 365 Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-in-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example in Action:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-purpose-built-governance-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Purpose-Built Governance Portal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benefits-of-microsoft-purview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefits of Microsoft Purview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Benefits of Microsoft Purview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-improved-decision-making" class="md-nav__link">
+    <span class="md-ellipsis">
+      a) Improved Decision-Making
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-enhanced-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      b) Enhanced Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-regulatory-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      c) Regulatory Compliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-scalability-across-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      d) Scalability Across Environments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-with-microsoft-purview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started with Microsoft Purview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-thoughts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Thoughts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links-to-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Links to Resources:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="microsoft-purview-simplifying-data-governance-in-a-complex-world">Microsoft Purview: Simplifying Data Governance in a Complex World</h1>
+<p><strong>Tagline:</strong> Empowering organizations with modern data governance to maximize the value of their data estate.</p>
+<hr />
+<p>Microsoft Purview is a unified data governance platform that enables businesses to discover, manage, and safeguard their data assets. With the sheer growth of data in today’s organizations, managing data governance can be challenging. Microsoft Purview provides tools to centralize and streamline this process while fostering compliance and productivity across the data lifecycle.</p>
+<p>Let’s dive into what Microsoft Purview is, its key features, and how it can transform the way businesses handle their data estate.</p>
+<hr />
+<h2 id="what-is-microsoft-purview">What is Microsoft Purview?</h2>
+<p>Microsoft Purview is a comprehensive suite of solutions designed to help businesses manage their data governance and compliance. Formerly known as Azure Purview, it goes beyond traditional governance solutions by integrating closely with Microsoft 365 and Azure ecosystems, along with other third-party tools and environments, to provide end-to-end visibility and control.</p>
+<p>Whether you’re a business managing sensitive data, ensuring compliance with regulations like GDPR, or trying to extract insights from a vast data landscape, Microsoft Purview has something to offer.</p>
+<hr />
+<h2 id="key-features-of-microsoft-purview">Key Features of Microsoft Purview</h2>
+<h3 id="1-data-discovery-and-classification">1. <strong>Data Discovery and Classification</strong></h3>
+<p>Understanding where your data resides and what type of information it holds is the cornerstone of governance. Microsoft Purview provides robust data discovery capabilities by scanning your entire data estate, both on-premises and in the cloud. </p>
+<h4 id="example-classifying-sensitive-data">Example: Classifying Sensitive Data</h4>
+<p>Imagine a financial institution that processes mountains of customer data daily. Purview can scan your datasets and classify Personally Identifiable Information (PII), such as credit card numbers or Social Security numbers. </p>
+<pre><code class="language-JSON">{
+  &quot;DataDetail&quot;: &quot;Customer Data&quot;,
+  &quot;Category&quot;: &quot;Sensitive&quot;,
+  &quot;Tags&quot;: [&quot;PII&quot;, &quot;CreditCard&quot;, &quot;Compliance&quot;],
+  &quot;Properties&quot;: {
+    &quot;Owner&quot;: &quot;Finance Team&quot;,
+    &quot;RetentionPolicy&quot;: &quot;3 Years&quot;
+  }
+}
+</code></pre>
+<p>The above classification ensures your organization knows where sensitive data resides and can implement the appropriate measures to protect it.</p>
+<hr />
+<h3 id="2-unified-data-lineage">2. <strong>Unified Data Lineage</strong></h3>
+<p>Tracing the origin and flow of data is essential for transparency. Data lineage in Purview provides a visual map showing how data moves across your environment. This highlights dependencies and transformations, helping stakeholders trust the data.</p>
+<h4 id="real-life-scenario">Real-Life Scenario:</h4>
+<p>A pharmaceutical company developing a new drug needs to comply with strict regulatory standards. Using Purview's data lineage feature, they can answer critical compliance questions such as:
+- Where did this set of patient trial data originate?
+- How was the data transformed during analysis?</p>
+<p>By having a clear lineage, organizations can enhance accountability and trust across teams.</p>
+<hr />
+<h3 id="3-end-to-end-data-governance-and-compliance">3. <strong>End-to-End Data Governance and Compliance</strong></h3>
+<p>Purview automates compliance efforts by providing insights into regulatory requirements and adherence. It supports frameworks like GDPR, HIPAA, and CCPA, among others.</p>
+<h4 id="code-snippet-setting-up-compliance-scans-for-azure-storage">Code Snippet: Setting Up Compliance Scans for Azure Storage</h4>
+<pre><code class="language-PowerShell"># Example: Automating data scanning in Azure storage
+Import-Module Az.Purview
+
+$PurviewAccount = &quot;YourPurviewAccountName&quot;
+$ScanName = &quot;GDPRCompliance&quot;
+
+# Schedule a compliance scan
+Start-AzPurviewScan -AccountName $PurviewAccount `
+                    -ScanName $ScanName `
+                    -Recurrence &quot;Weekly&quot;
+</code></pre>
+<p>With such capabilities, global enterprises can ensure their policies are automatically enforcing compliance with minimal manual intervention.</p>
+<hr />
+<h3 id="4-microsoft-365-integration">4. <strong>Microsoft 365 Integration</strong></h3>
+<p>Microsoft Purview seamlessly combines data governance with the tools employees already use, such as Word, Excel, and Teams. This integration allows users to classify documents, emails, and other records without disrupting productivity.</p>
+<h4 id="example-in-action">Example in Action:</h4>
+<p>An HR team shares employee performance reviews via Teams. Purview can automatically label these documents as confidential, restricting access to unauthorized participants.</p>
+<ul>
+<li><strong>Step 1:</strong> Purview flags sensitive content.</li>
+<li><strong>Step 2:</strong> Automated policies block sharing or require approval.</li>
+<li><strong>Step 3:</strong> Logs are maintained for audit trails.</li>
+</ul>
+<hr />
+<h3 id="5-purpose-built-governance-portal">5. <strong>Purpose-Built Governance Portal</strong></h3>
+<p>The consolidated Purview governance portal offers a single location for managing all aspects of data governance, from data scanning and classification to monitoring compliance risks.</p>
+<hr />
+<h2 id="benefits-of-microsoft-purview">Benefits of Microsoft Purview</h2>
+<h3 id="a-improved-decision-making">a) <strong>Improved Decision-Making</strong></h3>
+<p>With a unified platform to view and govern data, organizations can extract valuable insights faster and with more confidence.</p>
+<h3 id="b-enhanced-security">b) <strong>Enhanced Security</strong></h3>
+<p>By automating the identification of sensitive data and applying controls, businesses significantly reduce the risk of data breaches.</p>
+<h3 id="c-regulatory-compliance">c) <strong>Regulatory Compliance</strong></h3>
+<p>With out-of-the-box policies and scan templates, Purview takes the complexity out of staying compliant in heavily regulated industries.</p>
+<h3 id="d-scalability-across-environments">d) <strong>Scalability Across Environments</strong></h3>
+<p>From Azure, AWS, Google Cloud, to on-premises systems, Microsoft Purview helps govern data wherever it resides.</p>
+<hr />
+<h2 id="getting-started-with-microsoft-purview">Getting Started with Microsoft Purview</h2>
+<ol>
+<li>
+<p><strong>Set Up Purview Account:</strong>
+   Sign up for Microsoft Purview in the Azure portal and configure your data sources.</p>
+</li>
+<li>
+<p><strong>Scan Data Sources:</strong>
+   Use the scanning functionality to collect metadata and classify data across your systems.</p>
+</li>
+<li>
+<p><strong>Analyze and Govern:</strong>
+   Leverage features like data lineage, labeling, and compliance dashboards to manage your data estate effectively.</p>
+</li>
+<li>
+<p><strong>Automate Policies:</strong>
+   Define and enforce organizational policies for data handling, access, and retention.</p>
+</li>
+</ol>
+<hr />
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>Microsoft Purview is much more than a governance tool—it’s a platform that fosters reliability, scalability, and compliance at every step of your data management journey. Whether you're a small business or a global enterprise, this tool empowers you to understand your data better and make informed decisions with confidence.</p>
+<hr />
+<h2 id="links-to-resources">Links to Resources:</h2>
+<ol>
+<li><a href="https://docs.microsoft.com/en-us/azure/purview/overview">Microsoft Purview Overview</a></li>
+<li><a href="https://docs.microsoft.com/en-us/purview/data-governance">Microsoft Purview Data Governance Documentation</a></li>
+<li><a href="https://docs.microsoft.com/en-us/compliance/microsoft-purview-overview">Compliance in Microsoft Purview</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/purview/get-started">Microsoft Purview Start Guide</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/purview/data-classification">Data Classification in Microsoft Purview</a></li>
+</ol>
+<p>Embrace Microsoft Purview today and begin the transformation toward a well-governed and secure data estate!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
