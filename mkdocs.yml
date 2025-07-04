@@ -11,5 +11,6 @@ nav:
   - Azure Data Lake Storage: docs/Azure_Data_Lake_Storage.md
   - CoPilot Studio: docs/COPILOT_STUDIO.md
   - ASP.NET: docs/ASPNET.md
+  - Microsoft Graph API: docs/MICROSOFT_GRAPH_API.md
 theme:
   name: material
