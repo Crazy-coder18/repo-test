@@ -15,5 +15,7 @@ nav:
   - MICROSOFT PURVIEW: docs/MICROSOFT_PURVIEW.md
   - AZURE INFRA and Security: docs/AZURE_INFRA_and_Security.md
   - Microsoft Power BI: docs/MICROSOFT_POWER_BI.md
+- Blogs:
+  - Microsoft Power BI: docs/MICROSOFT_POWER_BI.md
 theme:
   name: material
