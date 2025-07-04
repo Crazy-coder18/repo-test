@@ -13,5 +13,6 @@ nav:
   - ASP.NET: docs/ASPNET.md
   - Microsoft Graph API: docs/MICROSOFT_GRAPH_API.md
   - MICROSOFT PURVIEW: docs/MICROSOFT_PURVIEW.md
+  - AZURE INFRA and Security: docs/AZURE_INFRA_and_Security.md
 theme:
   name: material
