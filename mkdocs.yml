@@ -7,5 +7,6 @@ nav:
   - AZURE BLOB STORAGE: docs/AZURE_BLOB_STORAGE.md
   - ASP: docs/ASP.md
   - Microsoft Purview: docs/Microsoft_Purview.md
+  - React JS: docs/React_JS.md
 theme:
   name: material
