@@ -12,5 +12,6 @@ nav:
   - CoPilot Studio: docs/COPILOT_STUDIO.md
   - ASP.NET: docs/ASPNET.md
   - Microsoft Graph API: docs/MICROSOFT_GRAPH_API.md
+  - MICROSOFT PURVIEW: docs/MICROSOFT_PURVIEW.md
 theme:
   name: material
