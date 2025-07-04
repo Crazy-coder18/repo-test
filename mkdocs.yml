@@ -8,5 +8,6 @@ nav:
   - ASP: docs/ASP.md
   - Microsoft Purview: docs/Microsoft_Purview.md
   - React JS: docs/React_JS.md
+  - Azure Data Lake Storage: docs/Azure_Data_Lake_Storage.md
 theme:
   name: material
