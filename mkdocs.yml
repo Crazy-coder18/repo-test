@@ -10,5 +10,6 @@ nav:
   - React JS: docs/React_JS.md
   - Azure Data Lake Storage: docs/Azure_Data_Lake_Storage.md
   - CoPilot Studio: docs/COPILOT_STUDIO.md
+  - ASP.NET: docs/ASPNET.md
 theme:
   name: material
